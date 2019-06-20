@@ -1,0 +1,46 @@
+
+@import "node_modules/bootstrap/scss/functions";
+@import "node_modules/bootstrap/scss/variables";
+
+$nicered: #dadada;
+$niceteal: #62e5b9;
+$niceblue: #6dcfed;
+$blue: #0000FF;
+$theme-colors: (
+  primary: $light
+);
+
+@import "node_modules/bootstrap/scss/bootstrap.scss";
+@import "node_modules/animate.css/animate";
+
+.bg-dark {
+    background: rgba(255, 255, 255, 0) !important;
+}
+
+.btn-primary {
+    background-color: rgba(35, 35, 35, 0.658) !important;
+    color: $light !important;
+}
+
+body {
+    background: rgb(229,236,255);
+    background: linear-gradient(90deg, rgba(229,236,255,1) 0%, rgba(227,250,255,1) 100%);
+    color: $dark;
+}
+
+.mid-page-f {
+    width: 100%;
+    display: inline-flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.jumbotron {
+    background: rgba(255, 255, 255, 0.6) !important;
+}
+
+#dl {
+    cursor: pointer;
+}
