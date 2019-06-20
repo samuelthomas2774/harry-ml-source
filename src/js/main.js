@@ -1,16 +1,19 @@
 // Username, ID of Image element
-let $ = require("jquery");
-import 'bootstrap';
+
+import $ from 'jquery';
+window.jQuery = $;
+window.$ = $;
+
+require('bootstrap');
+
 import { githubProfilePicture } from './ghpfp.js';
 githubProfilePicture('harryuk', '.pfp');
 
-let removeid = 0;
 
 $("#homeClick").click((event) => {
     event.preventDefault();
-    $(removeid).removeClass('active');
-    $('#homeClick').addClass('active');
-    let removeid = "#homeClick";
+    $(".nav li").removeClass("active");
+    $(this).addClass("active");
     $('html, body').animate({
         scrollTop: $("#home").offset().top
     }, 1000);
@@ -18,8 +21,8 @@ $("#homeClick").click((event) => {
 
 $("#aboutClick").click((event) => {
     event.preventDefault();
-    $(removeid).removeClass('active');
-    $('#aboutClick').addClass('active');
+    $(".nav li").removeClass("active");
+    $(this).addClass("active");
     let removeid = "#aboutClick";
     $('html, body').animate({
         scrollTop: $("#about").offset().top
@@ -28,8 +31,8 @@ $("#aboutClick").click((event) => {
 
 $("#projectsClick").click((event) => {
     event.preventDefault();
-    $(removeid).removeClass('active');
-    $('#projectsClick').addClass('active');
+    $(".nav li").removeClass("active");
+    $(this).addClass("active");
     let removeid = "#projectsClick";
     $('html, body').animate({
         scrollTop: $("#projects").offset().top
@@ -38,8 +41,8 @@ $("#projectsClick").click((event) => {
 
 $("#contactClick").click((event) => {
     event.preventDefault();
-    $(removeid).removeClass('active');
-    $('#contactClick').addClass('active');
+    $(".nav li").removeClass("active");
+    $(this).addClass("active");
     let removeid = "#contactClick";
     $('html, body').animate({
         scrollTop: $("#contact").offset().top

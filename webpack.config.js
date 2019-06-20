@@ -9,8 +9,8 @@ module.exports = {
     filename: 'final.js'
   },
   externals: {
-    jquery: true,
-    bootstrap: true
+    $: 'jquery',
+    jQuery: 'jquery'
   },
   mode: 'production',
   watch: false

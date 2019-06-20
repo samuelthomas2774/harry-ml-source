@@ -22,8 +22,12 @@ $theme-colors: (
     color: $light !important;
 }
 
+.blur {
+    -webkit-backdrop-filter: blur(10px) !important; 
+}
+
 body {
-    background: rgb(229,236,255);
+    background-color: rgba(227,250,255,1);
     background: linear-gradient(90deg, rgba(229,236,255,1) 0%, rgba(227,250,255,1) 100%);
     color: $dark;
 }
@@ -31,7 +35,7 @@ body {
 .mid-page-f {
     width: 100%;
     display: inline-flex;
-    height: 100vh;
+    height: 90vh;
     justify-content: center;
     align-items: center;
     flex-direction: column;
