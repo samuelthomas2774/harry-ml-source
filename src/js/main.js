@@ -15,7 +15,7 @@ $("#homeClick").click((event) => {
     $(".nav li").removeClass("active");
     $(this).addClass("active");
     $('html, body').animate({
-        scrollTop: $("#home").offset().top
+        scrollTop: $("#home").offset().top - 100
     }, 1000);
 });
 
@@ -25,7 +25,7 @@ $("#aboutClick").click((event) => {
     $(this).addClass("active");
     let removeid = "#aboutClick";
     $('html, body').animate({
-        scrollTop: $("#about").offset().top
+        scrollTop: $("#about").offset().top - 100
     }, 1000);
 });
 
