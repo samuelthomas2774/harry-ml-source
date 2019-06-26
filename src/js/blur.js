@@ -1,6 +1,6 @@
 /*
     blur.js
-    sets backdrop blur on most elements
+    sets backdrop blur on most elements when executed
 */
 function startblur() {
     let jumbotrons = document.querySelectorAll('.jumbotron');

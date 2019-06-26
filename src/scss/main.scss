@@ -28,12 +28,13 @@ $theme-colors: (
 }
 
 body {
-    background: linear-gradient(270deg, #bedce4, #bceada);
+    background: linear-gradient(270deg, #bedce4, #fce6f5);
     background-size: 400% 400%;
     -webkit-animation: hcarrigan 5s ease infinite;
     -moz-animation: hcarrigan 5s ease infinite;
     animation: hcarrigan 5s ease infinite;
     color: $dark;
+    margin-top: 50px !important;
 }
 
 .mid-page-f {
