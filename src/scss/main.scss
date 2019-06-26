@@ -20,32 +20,55 @@ $theme-colors: (
 .btn-primary {
     background-color: rgba(35, 35, 35, 0.658) !important;
     color: $light !important;
-}
-
-.blur {
-    -webkit-backdrop-filter: blur(10px) !important; 
+    border: 0 !important;
+    transition: 1s ease;
+    &:hover {
+        background-color: rgba(35, 35, 35, 1) !important;
+    }
 }
 
 body {
-    background-color: rgba(227,250,255,1);
-    background: linear-gradient(90deg, rgba(229,236,255,1) 0%, rgba(227,250,255,1) 100%);
+    background: linear-gradient(270deg, #bedce4, #bceada);
+    background-size: 400% 400%;
+    -webkit-animation: hcarrigan 5s ease infinite;
+    -moz-animation: hcarrigan 5s ease infinite;
+    animation: hcarrigan 5s ease infinite;
     color: $dark;
 }
 
 .mid-page-f {
     width: 100%;
     display: inline-flex;
-    height: 90vh;
+    height: 100vh;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin-bottom: 10vh;
 }
 
 .jumbotron {
-    background: rgba(255, 255, 255, 0.6) !important;
+    background: rgba(255, 255, 255, 0.6);
 }
 
 #dl {
     cursor: pointer;
+}
+@-webkit-keyframes hcarrigan {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes hcarrigan {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes hcarrigan {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
+.blurr {
+    background-color: rgba(255, 255, 255, 0.2) !important;
+    -webkit-backdrop-filter: blur(10px) !important;
 }

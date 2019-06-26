@@ -1,4 +1,5 @@
 const path = require('path');
+var webpack = require('webpack');
 
 module.exports = {
   entry: [
@@ -7,10 +8,6 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'build/js/'),
     filename: 'final.js'
-  },
-  externals: {
-    $: 'jquery',
-    jQuery: 'jquery'
   },
   mode: 'production',
   watch: false

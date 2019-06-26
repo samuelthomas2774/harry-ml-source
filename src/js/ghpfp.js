@@ -1,3 +1,10 @@
+/*
+    gh-pfp
+    grabs github profile pictures from github's api
+    and stores them in client's local storage.
+    https://github.com/harryuk/gh-pfp
+*/
+
 async function removeGithubStorage() {
     localStorage.removeItem('githubUsername');
     localStorage.removeItem('githubProfilePictureURL');

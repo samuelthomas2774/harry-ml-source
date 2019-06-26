@@ -1,50 +1,21 @@
-// Username, ID of Image element
-
-import $ from 'jquery';
-window.jQuery = $;
-window.$ = $;
-
-require('bootstrap');
-
+/*
+    main.js
+    think of this as the main man...not the bullying type though
+*/
 import { githubProfilePicture } from './ghpfp.js';
+import './init.js';
+import './browser.js';
 githubProfilePicture('harryuk', '.pfp');
 
-
-$("#homeClick").click((event) => {
-    event.preventDefault();
-    $(".nav li").removeClass("active");
-    $(this).addClass("active");
-    $('html, body').animate({
-        scrollTop: $("#home").offset().top - 100
-    }, 1000);
-});
-
-$("#aboutClick").click((event) => {
-    event.preventDefault();
-    $(".nav li").removeClass("active");
-    $(this).addClass("active");
-    let removeid = "#aboutClick";
-    $('html, body').animate({
-        scrollTop: $("#about").offset().top - 100
-    }, 1000);
-});
-
-$("#projectsClick").click((event) => {
-    event.preventDefault();
-    $(".nav li").removeClass("active");
-    $(this).addClass("active");
-    let removeid = "#projectsClick";
-    $('html, body').animate({
-        scrollTop: $("#projects").offset().top
-    }, 1000);
-});
-
-$("#contactClick").click((event) => {
-    event.preventDefault();
-    $(".nav li").removeClass("active");
-    $(this).addClass("active");
-    let removeid = "#contactClick";
-    $('html, body').animate({
-        scrollTop: $("#contact").offset().top
-    }, 1000);
+$(document).ready(() => {
+    console.log('jQuery declared document as ready');
+    $('.navbar-nav .nav-link').click(function() {
+       console.log('Navigator was run');
+       $('.navbar-nav .nav-link.active').removeClass('active');
+       $(this).addClass('active');
+       let split = $(this).attr('href').split('-')[0]
+       $('html, body').animate({
+           scrollTop: $(split).offset().top
+       }, 1000);
+   });
 });
